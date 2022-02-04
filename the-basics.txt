@@ -1,0 +1,86 @@
+
+HP@Rozandi MINGW64 /e/Amman
+$ mkdir git-basic
+
+HP@Rozandi MINGW64 /e/Amman
+$ cd git-basic
+
+HP@Rozandi MINGW64 /e/Amman/git-basic
+$ touch first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic
+$ git init
+Initialized empty Git repository in E:/Amman/git-basic/.git/
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git add first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git commit -m "adding first.txt"
+[master (root-commit) ed87f38] adding first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git log
+commit ed87f382175ff5f6ba9c423da373708e2d8980e6 (HEAD -> master)
+Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+Date:   Thu Feb 3 15:02:56 2022 +0800
+
+    adding first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ touch second.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ ls
+first.txt  second.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git add second.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git commit -m "adding second.txt"
+[master d5325c8] adding second.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ rm first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ ls
+second.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git add .
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git commit -m "removing first.txt"
+[master 3c15db2] removing first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ git log
+commit 3c15db2b9df67d9170dccbba445f6cb7a63b3ce7 (HEAD -> master)
+Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+Date:   Thu Feb 3 15:05:57 2022 +0800
+
+    removing first.txt
+
+commit d5325c822b59a78f965fd440399638ace0d99614
+Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+Date:   Thu Feb 3 15:04:11 2022 +0800
+
+    adding second.txt
+
+commit ed87f382175ff5f6ba9c423da373708e2d8980e6
+Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+Date:   Thu Feb 3 15:02:56 2022 +0800
+
+    adding first.txt
+
+HP@Rozandi MINGW64 /e/Amman/git-basic (master)
+$ ls
+second.txt

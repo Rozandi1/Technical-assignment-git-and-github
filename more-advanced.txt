@@ -1,0 +1,29 @@
+1. git revert
+	Perintah ini membuat komit baru yang membatalkan perubahan dari komit sebelumnya. Perintah ini menambahkan riwayat baru ke proyek (tidak mengubah riwayat yang ada). menggunakan perintah ini Jika komit telah dibuat di suatu tempat dalam sejarah proyek, dan Anda kemudian memutuskan bahwa komit itu salah dan seharusnya tidak dilakukan, maka git revert adalah alat untuk pekerjaan itu. Ini akan membatalkan perubahan yang diperkenalkan oleh komit buruk, merekam "undo" dalam sejarah.
+
+git reset
+Perintah ini sedikit lebih rumit. Itu benar-benar melakukan beberapa hal yang berbeda tergantung pada bagaimana itu dipanggil. Ini memodifikasi indeks (yang disebut "area pementasan"). Atau itu mengubah komit yang ditunjuk oleh kepala cabang saat ini. Perintah ini dapat mengubah riwayat yang ada (dengan mengubah komit yang dirujuk oleh cabang). menggunakan perintah ini Jika Anda telah membuat komit, tetapi belum membagikannya dengan orang lain dan Anda memutuskan tidak menginginkannya, maka Anda dapat menggunakan git reset untuk menulis ulang riwayat sehingga seolah-olah Anda tidak pernah membuat komit itu .
+
+2. Git Merge - Untuk pengembang yang menggunakan sistem kontrol versi, penggabungan adalah metode yang lazim. Penggabungan mengambil konten cabang sumber dan menggabungkannya dengan cabang target, lebih tepatnya. Hanya cabang target yang diperbarui dalam proses ini. Sejarah cabang sumber tetap serupa.
+
+Git Rebase - Cara lain untuk mengintegrasikan modifikasi dari satu cabang ke cabang lainnya adalah dengan Rebase. Rebase mengompres semua modifikasi menjadi satu tambalan. Patch tersebut kemudian dimasukkan ke dalam cabang target.
+
+Kapan menggunakan Git Rebase atau Git Merge
+Pilih Merge
+- setiap kali kita ingin menambahkan perubahan dari cabang fitur kembali ke cabang dasar.
+- jika Anda ingin menyimpan riwayat yang sama daripada menulis ulang.
+- jika Anda ingin mengembalikan perubahan dengan cepat
+Pilih Rebase
+- setiap kali kita ingin menambahkan perubahan dari cabang dasar kembali ke cabang fitur.
+- hancurkan beberapa komit
+- ulangi setiap komit dan perbarui perubahan
+- mengembalikan rebase akan sangat sulit 
+
+3. git stash pop membuang simpanan (paling atas, secara default) setelah menerapkannya, sedangkan git stash berlaku meninggalkannya di daftar simpanan untuk kemungkinan digunakan kembali nanti (atau Anda kemudian dapat git stash menjatuhkannya).
+
+Ini terjadi kecuali ada konflik setelah git stash pop, dalam hal ini ia tidak akan menghapus simpanan, membiarkannya berperilaku persis seperti yang diterapkan git simpanan.
+
+4. - Rebasing interaktif dapat digunakan untuk mengubah komit dalam banyak cara seperti mengedit, menghapus, dan meremas.
+- Untuk memberi tahu Git tempat memulai rebase interaktif, gunakan SHA-1 atau indeks komit yang segera mendahului komit yang ingin Anda ubah.
+- Selama rebase interaktif, ketika Git berhenti pada komit yang Anda tandai untuk diedit, alur kerjanya tidak berbeda dengan proses komit normal — Anda menyusun file dan kemudian mengkomitnya. Satu-satunya perbedaan adalah Anda menggunakan perintah git commit --amend daripada git commit.
+- Rebasing interaktif akan membuat SHA-1 baru oleh karena itu yang terbaik adalah menggunakan rebasing interaktif pada komit yang belum Anda dorong ke cabang jarak jauh.

@@ -1,0 +1,105 @@
+1. klik fork di repository
+2. setelah di reposiroty saya, lalu mengclonenya dari repository saya
+3. lalu git clone pada git branch
+4. setelah berhasil lalu $ cd tech4impact-students-bio
+5. dan melakukan langkah dibawah ini:
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git branch rozandi
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git checkout rozandi
+Switched to branch 'rozandi'
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ touch rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ echo "Nama Lengkap: David Winalda
+> Umur: 27
+> Pesan yang ingin disampaikan: Semangat untuk kamu yang disana sedang berjuang" > rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ echo "Nama Lengkap: David Winalda
+> Umur: 22
+> Pesan yang ingin disampaikan: Tetap semangat dan tunjukkan hasil dari usahamu" > rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ git init
+Reinitialized existing Git repository in D:/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio/.git/
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ git add rozandi.md
+warning: LF will be replaced by CRLF in rozandi.md.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ git commit -m "rozandi.md
+> "
+[rozandi c8c3067] rozandi.md
+ 1 file changed, 3 insertions(+)
+ create mode 100644 rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (rozandi)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git merge rozandi
+Updating 165aa3b..c8c3067
+Fast-forward
+ rozandi.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ ls
+davidwinald.md  rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ cat rozandi.md
+Nama Lengkap: David Winalda
+> Umur: 22
+> Pesan yang ingin disampaikan: Tetap semangat dan tunjukkan hasil dari usahamu
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ echo "Nama Lengkap: Rozandi
+> Umur: 22
+> Pesan yang ingin disampaikan: lakukan yang terbaik, ikhlas dan konsisten. teruslah berkarya tunjukkan ke dunia bahwa kamu bisa" > rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git add rozandi,md
+fatal: pathspec 'rozandi,md' did not match any files
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git add rozandi.md
+warning: LF will be replaced by CRLF in rozandi.md.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git commit -m "rozandi.md"
+[master 8ffb95b] rozandi.md
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ ls
+davidwinald.md  rozandi.md
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ cat rozandi.md
+Nama Lengkap: Rozandi
+Umur: 22
+Pesan yang ingin disampaikan: lakukan yang terbaik, ikhlas dan konsisten. teruslah berkarya tunjukkan ke dunia bahwa kamu bisa
+
+HP@Rozandi MINGW64 /d/Amman/Tugas Coding Amman Bootcamp/Technical Assigment Git and Github/tech4impact-students-bio (master)
+$ git push origin master
+Enter passphrase for key '/c/Users/HP/.ssh/id_rsa':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 776 bytes | 388.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Rozandi1/tech4impact-students-bio.git
+   165aa3b..8ffb95b  master -> master

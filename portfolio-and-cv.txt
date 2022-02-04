@@ -1,0 +1,172 @@
+HP@Rozandi MINGW64 /e/Amman
+$ mkdir Roza
+
+HP@Rozandi MINGW64 /e/Amman
+$ cd Roza
+
+HP@Rozandi MINGW64 /e/Amman/Roza
+$ touch README.md
+
+HP@Rozandi MINGW64 /e/Amman/Roza
+$ echo "Halo perkenalkan aku halaman utama" > README.md
+
+HP@Rozandi MINGW64 /e/Amman/Roza
+$ git init
+Initialized empty Git repository in E:/Amman/Roza/.git/
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git commit -m "Inisialisasi Git Repository"
+[master (root-commit) 883e430] Inisialisasi Git Repository
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git branch cv
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git checkout cv
+Switched to branch 'cv'
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ touch cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ echo "Ini adalah file CV" > cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git add cv.txt
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git commit -m "Inisialisasi CV"
+[cv 2a32c61] Inisialisasi CV
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ nano cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git add cv.txt
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git commit -m "Perusahaan pertama"
+[cv a92db33] Perusahaan pertama
+ 1 file changed, 1 insertion(+)
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ nano cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git add cv.txt
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git commit -m "perusahaan kedua"
+[cv ef607f4] perusahaan kedua
+ 1 file changed, 1 insertion(+)
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ nano cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git add cv.txt
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git commit -m "perusahaan ketiga"
+[cv c8b6fd5] perusahaan ketiga
+ 1 file changed, 1 insertion(+)
+
+HP@Rozandi MINGW64 /e/Amman/Roza (cv)
+$ git checkout master
+Switched to branch 'master'
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ echo "Halo perkenalkan aku halaman utama
+> Ini adalah update pertama pada branch master" > README.md
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git commit -m "update master pertama"
+[master 9f2f885] update master pertama
+ 1 file changed, 1 insertion(+)
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ cat README.md
+Halo perkenalkan aku halaman utama
+Ini adalah update pertama pada branch master
+
+HP@Rozandi MINGW64 /e/Amman/Roza (master)
+$ git merge cv
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+Merge made by the 'ort' strategy.
+ cv.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 cv.txt
+
+HP@Rozandi MINGW64 /e/Amman/Roza (main)
+$ git log --graph
+*   commit 2dc7be2dd2ae9a694e3ff29e732d7f954ad2a1ce (HEAD -> main, master)
+*   commit 2dc7be2dd2ae9a694e3ff29e732d7f954ad2a1ce (HEAD -> main, master)
+|\  Merge: 9f2f885 c8b6fd5
+| | Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+| | Date:   Thu Feb 3 23:11:32 2022 +0800
+| |
+| |     Merge branch 'cv'
+| |
+| * commit c8b6fd54c5808efc3eee71a1c9a9ceb2673c0479 (cv)
+| | Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+| | Date:   Thu Feb 3 21:28:58 2022 +0800
+| |
+| |     perusahaan ketiga
+| |
+| * commit ef607f48603e2723d8bda629769557b2b41f8f78
+| | Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+| | Date:   Thu Feb 3 21:28:15 2022 +0800
+| |
+| |     perusahaan kedua
+| |
+| * commit a92db33a6e0d5ea18d387d135b98e69843ca06af
+| | Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+| | Date:   Thu Feb 3 21:27:16 2022 +0800
+| |
+| |     Perusahaan pertama
+| |
+| * commit 2a32c61903a68323d0c2c540837cc05646634783
+| | Author: Rozandi1 <98866052+Rozandi1@users.noreply.github.com>
+| | Date:   Thu Feb 3 21:26:11 2022 +0800
+| |
+| |     Inisialisasi CV
+| |
+
+HP@Rozandi MINGW64 /e/Amman/Roza (main)
+$ git remote add origin git@github.com:Rozandi1/Technical-Assigment.git
+git branch -M main
+git push -u origin main
+Enter passphrase for key '/c/Users/HP/.ssh/id_rsa':
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (20/20), 1.91 KiB | 61.00 KiB/s, done.
+Total 20 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Rozandi1/Technical-Assigment.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
